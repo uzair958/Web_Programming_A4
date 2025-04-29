@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Admin Actions</h4>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <a asp-controller="Account" asp-action="ManageUsers" class="list-group-item list-group-item-action">
+                        <i class="bi bi-people"></i> Manage Users
+                    </a>
+                    <a asp-controller="Admin" asp-action="ManageRoles" class="list-group-item list-group-item-action">
+                        <i class="bi bi-shield-lock"></i> Manage Roles
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>System Statistics</h4>
+            </div>
+            <div class="card-body">
+                <p>Total Users: <strong>@ViewBag.TotalUsers</strong></p>
+                <p>Admins: <strong>@ViewBag.AdminCount</strong></p>
+                <p>Moderators: <strong>@ViewBag.ModeratorCount</strong></p>
+                <p>Regular Users: <strong>@ViewBag.UserCount</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Recent Activity</h4>
+            </div>
+            <div class="card-body">
+                <p>This is where recent system activity would be displayed.</p>
+            </div>
+        </div>
+    </div>
+</div>

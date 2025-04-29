@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Moderator Dashboard";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Moderator Actions</h4>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <a asp-controller="Moderator" asp-action="ManageContent" class="list-group-item list-group-item-action">
+                        <i class="bi bi-file-earmark-text"></i> Manage Content
+                    </a>
+                    <a asp-controller="Moderator" asp-action="ReviewReports" class="list-group-item list-group-item-action">
+                        <i class="bi bi-flag"></i> Review Reports
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Recent Reports</h4>
+            </div>
+            <div class="card-body">
+                <p>This is where recent reports would be displayed for moderator review.</p>
+            </div>
+        </div>
+    </div>
+</div>

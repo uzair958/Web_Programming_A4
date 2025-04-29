@@ -1,0 +1,53 @@
+@model wp_A4.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "User Dashboard";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Welcome, @Model.FirstName!</h4>
+            </div>
+            <div class="card-body">
+                <p>This is your personal dashboard where you can manage your account and access features.</p>
+                <div class="list-group">
+                    <a asp-controller="User" asp-action="Profile" class="list-group-item list-group-item-action">
+                        <i class="bi bi-person"></i> View Profile
+                    </a>
+                    <a asp-controller="User" asp-action="Dashboard" class="list-group-item list-group-item-action">
+                        <i class="bi bi-speedometer2"></i> User Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Your Information</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Email:</strong> @Model.Email</p>
+                <p><strong>First Name:</strong> @Model.FirstName</p>
+                <p><strong>Last Name:</strong> @Model.LastName</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Recent Activity</h4>
+            </div>
+            <div class="card-body">
+                <p>This is where your recent activity would be displayed.</p>
+            </div>
+        </div>
+    </div>
+</div>

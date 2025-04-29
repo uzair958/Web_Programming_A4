@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Role-Based Authentication Demo</h1>
+    <p>This application demonstrates role-based authentication and authorization using ASP.NET Core Identity.</p>
+
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <div class="mt-4">
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary me-2">Register</a>
+            <a asp-controller="Account" asp-action="Login" class="btn btn-success">Login</a>
+        </div>
+
+        <div class="mt-4">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5>Available Roles</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header bg-danger text-white">Admin</div>
+                                <div class="card-body">
+                                    <p>Full access to all features</p>
+                                    <p>Can manage users and roles</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header bg-warning">Moderator</div>
+                                <div class="card-body">
+                                    <p>Can manage content</p>
+                                    <p>Can review reports</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header bg-success text-white">User</div>
+                                <div class="card-body">
+                                    <p>Basic access to features</p>
+                                    <p>Can view and edit own profile</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
