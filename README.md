@@ -46,12 +46,12 @@ This project implements the authentication and authorization framework with plac
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/role-based-auth-demo.git
+   git clone https://github.com/uzair958/Web_Programming_A4
    ```
 
 2. Navigate to the project directory
    ```
-   cd role-based-auth-demo
+   cd wp_A4
    ```
 
 3. Restore dependencies
@@ -64,7 +64,7 @@ This project implements the authentication and authorization framework with plac
    dotnet run
    ```
 
-5. Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
+5. Open Browser through link
 
 ## Project Structure
 
